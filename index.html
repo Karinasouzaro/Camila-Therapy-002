@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camila Therapy | Psicologia e Neuropsicologia</title>
+    <meta name="description" content="Atendimento psicológico e neuropsicológico com foco no bem-estar e acolhimento.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Partículas de Fundo -->
+    <div id="particles-wrap" class="particles-wrap"></div>
+
+    <!-- Navbar -->
+    <header id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <div class="logo-brand">
+                    <div class="logo-with-icon">
+                        <i class="bi bi-heart-fill logo-icon"></i>
+                        <span class="brand-camila">Camila</span>
+                    </div>
+                    <span class="brand-therapy">Therapy</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                    <li><a href="#consultas" class="nav-link">Consultas e Sobre</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="btn-theme" class="btn-theme" aria-label="Alternar tema">
+                    <i class="bi bi-brightness-high icon-sun"></i>
+                    <i class="bi bi-moon-stars icon-moon"></i>
+                </button>
+                <a href="#contato" class="btn-agendar desktop-only">Agendar</a>
+                <button id="hamburger" class="hamburger" aria-label="Menu mobile">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu Mobile Overlay -->
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="mobile-menu-inner">
+            <ul class="mobile-links">
+                <li><a href="#home" class="mobile-link">Home</a></li>
+                <li><a href="#servicos" class="mobile-link">Serviços</a></li>
+                <li><a href="#consultas" class="mobile-link">Consultas e Sobre</a></li>
+                <li><a href="#contato" class="mobile-link">Contato</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Menu Inferior Mobile (Bottom Nav) -->
+    <nav class="bottom-nav">
+        <a href="#home" class="bottom-nav-item active">
+            <i class="bi bi-house"></i>
+            <span>Home</span>
+        </a>
+        <a href="#servicos" class="bottom-nav-item">
+            <i class="bi bi-brain"></i>
+            <span>Serviços</span>
+        </a>
+        <a href="#contato" class="bottom-nav-item agendar-item">
+            <div class="agendar-circle">
+                <i class="bi bi-calendar-event"></i>
+            </div>
+            <span>Agendar</span>
+        </a>
+        <a href="#contato" class="bottom-nav-item">
+            <i class="bi bi-telephone"></i>
+            <span>Contato</span>
+        </a>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-text-col" data-aos="fade-right">
+                    <span class="section-tag">Bem-vindo(a) à Camila Therapy</span>
+                    <h1 class="hero-headline">Você não precisa passar por isso <span class="highlight-text">sozinho(a).</span></h1>
+                    <p class="hero-subheadline">A Camila Therapy tem o objetivo de ajudar você a cuidar da sua saúde mental e emocional com muito acolhimento.</p>
+                    <div class="hero-actions">
+                        <a href="#contato" class="btn-primary">Agendar consulta</a>
+                        <a href="#sobre" class="btn-outline">Conhecer Mais</a>
+                    </div>
+                </div>
+                <div class="hero-img-col" data-aos="fade-left">
+                    <div class="hero-image-wrapper">
+                        <img src="camila-hero-new.png" alt="Camila Therapy Hero" class="hero-main-img">
+                        <div class="floating-card glass">
+                            <i class="bi bi-check2-circle"></i>
+                            <span>Atendimento Humanizado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comfort Strip -->
+        <section class="comfort-strip">
+            <div class="container">
+                <div class="comfort-grid">
+                    <div class="comfort-card" data-aos="fade-up">
+                        <i class="bi bi-shield-check"></i>
+                        <span>Ambiente Seguro</span>
+                    </div>
+                    <div class="comfort-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="bi bi-people"></i>
+                        <span>Escuta Ativa</span>
+                    </div>
+                    <div class="comfort-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="bi bi-journal-text"></i>
+                        <span>Ética Profissional</span>
+                    </div>
+                    <div class="comfort-card" data-aos="fade-up" data-aos-delay="300">
+                        <i class="bi bi-stars"></i>
+                        <span>Bem-estar</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Serviços Section -->
+        <section id="servicos" class="section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">Especialidades</span>
+                    <h2 class="section-title">Como posso <span class="highlight-text">te ajudar?</span></h2>
+                    <p class="section-desc">Ofereço serviços especializados adaptados às suas necessidades individuais.</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card glass" data-aos="fade-up">
+                        <div class="service-icon"><i class="bi bi-brain"></i></div>
+                        <h3>Avaliação neuropsicológica</h3>
+                        <p>Investigação detalhada das funções cognitivas para um diagnóstico preciso e um plano de intervenção eficaz.</p>
+                    </div>
+                    <div class="service-card glass" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-icon"><i class="bi bi-heart-pulse"></i></div>
+                        <h3>Atendimento para ansiedade e estresse</h3>
+                        <p>Estratégias e acolhimento para lidar com as pressões do dia a dia e recuperar seu equilíbrio emocional.</p>
+                    </div>
+                    <div class="service-card glass" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-icon"><i class="bi bi-puzzle"></i></div>
+                        <h3>Acompanhamento cognitivo</h3>
+                        <p>Foco no desenvolvimento e fortalecimento das habilidades mentais para uma vida mais funcional.</p>
+                    </div>
+                    <div class="service-card glass" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-icon"><i class="bi bi-book"></i></div>
+                        <h3>Orientação para dificuldades de aprendizagem</h3>
+                        <p>Suporte especializado para superar desafios escolares e acadêmicos, respeitando o seu ritmo.</p>
+                    </div>
+                    <div class="service-card glass" data-aos="fade-up" data-aos-delay="400">
+                        <div class="service-icon"><i class="bi bi-stars"></i></div>
+                        <h3>Estimulação cognitiva</h3>
+                        <p>Exercícios e práticas voltadas para a melhora da memória, atenção e outras funções executivas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabs Section (Consultas / Sobre) -->
+        <section id="consultas" class="section bg-alt">
+            <div class="container">
+                <div class="tabs-container">
+                    <div class="tabs-header">
+                        <button id="tab-consultas-btn" class="tab-btn active">Consultas</button>
+                        <button id="tab-sobre-btn" class="tab-btn">Sobre Mim</button>
+                    </div>
+                    <div class="tabs-content">
+                        <div id="tab-consultas-panel" class="tab-panel active" data-aos="fade-up">
+                            <h3>Como funcionam as sessões</h3>
+                            <p>O primeiro passo é entrar em contato pelo WhatsApp. Vamos conversar brevemente para entender sua demanda e encontrar o melhor horário.</p>
+                            <ul class="check-list">
+                                <li><i class="bi bi-check-lg"></i> <strong>Duração:</strong> As sessões têm duração de 50 minutos.</li>
+                                <li><i class="bi bi-check-lg"></i> <strong>Online:</strong> Atendimento por plataforma de vídeo segura, no conforto da sua casa.</li>
+                                <li><i class="bi bi-check-lg"></i> <strong>Primeira vez?</strong> É normal sentir um pouco de ansiedade. Nosso primeiro encontro é focado em nos conhecermos e criar um espaço seguro para você.</li>
+                            </ul>
+                            <a href="https://wa.me/5511999999999" target="_blank" class="btn-primary">Agendar via WhatsApp</a>
+                        </div>
+                        <div id="tab-sobre-panel" class="tab-panel">
+                            <div id="sobre"></div> <!-- Âncora interna -->
+                            <h3>Sobre Camila</h3>
+                            <p>Sou psicóloga com formação em neuropsicologia e tenho como propósito ajudar pessoas a entenderem melhor seus pensamentos, emoções e comportamentos.</p>
+                            <p>Apaixonada pelo que faço, ofereço um atendimento acolhedor, humano e sem julgamentos, criando um espaço seguro onde cada pessoa pode se sentir à vontade para falar e se conhecer melhor.</p>
+                            <p>Meu trabalho é voltado para o cuidado com a saúde mental, auxiliando no enfrentamento da ansiedade, do estresse e das dificuldades do dia a dia, sempre com atenção, empatia e escuta ativa.</p>
+                            <p>Além da minha atuação profissional, sou mãe de gêmeos, Leonardo e Maria Vitória, de 4 anos. A maternidade reforçou ainda mais meu olhar sensível, paciente e compreensivo, tanto na vida quanto no atendimento.</p>
+                            <p><strong>Meu objetivo é que você se sinta acolhida(o), respeitada(o) e fortalecida(o) para lidar com seus desafios de forma mais leve e consciente.</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Contato -->
+        <section id="contato" class="section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">Fale Comigo</span>
+                    <h2 class="section-title">Vamos iniciar uma <span class="highlight-text">conversa?</span></h2>
+                    <p class="section-desc">Na Camila Therapy, oferecemos um atendimento dedicado ao seu bem-estar. Escolha o canal de sua preferência, e lembre-se: <strong>Estou aqui para te ouvir.</strong></p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- WhatsApp -->
+                    <div class="contact-card glass" data-aos="fade-up">
+                        <div class="contact-icon wa"><i class="bi bi-whatsapp"></i></div>
+                        <h3>WhatsApp</h3>
+                        <p>Dúvidas rápidas e agendamentos imediatos por mensagem.</p>
+                        <a href="https://wa.me/5511999999999" target="_blank" class="btn-contact">Enviar Mensagem</a>
+                    </div>
+
+                    <!-- Instagram -->
+                    <div class="contact-card glass" data-aos="fade-up" data-aos-delay="100">
+                        <div class="contact-icon ig"><i class="bi bi-instagram"></i></div>
+                        <h3>Instagram</h3>
+                        <p>Acompanhe meu conteúdo e dicas sobre saúde mental.</p>
+                        <a href="https://instagram.com/seuusuario" target="_blank" class="btn-contact">Seguir no Instagram</a>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="contact-card glass" data-aos="fade-up" data-aos-delay="200">
+                        <div class="contact-icon mail"><i class="bi bi-envelope-at"></i></div>
+                        <h3>E-mail</h3>
+                        <p>Para parcerias, dúvidas formais ou outras solicitações.</p>
+                        <a href="mailto:contato@camilatherapy.com.br" class="btn-contact">Enviar E-mail</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <a href="#home" class="footer-logo">
+                        <div class="logo-brand footer-logo-brand">
+                            <div class="logo-with-icon">
+                                <i class="bi bi-heart-fill logo-icon"></i>
+                                <span class="brand-camila">Camila</span>
+                            </div>
+                            <span class="brand-therapy">Therapy</span>
+                        </div>
+                    </a>
+                    <p>Cuidando da sua saúde mental com ética e profissionalismo.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <p><i class="bi bi-geo-alt"></i> Av. Exemplo, 123 - Centro</p>
+                    <p><i class="bi bi-envelope"></i> contato@camilatherapy.com.br</p>
+                    <p><i class="bi bi-whatsapp"></i> (11) 99999-9999</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">© 2024 Camila Therapy · Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
