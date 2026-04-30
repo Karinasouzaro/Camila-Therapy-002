@@ -12,6 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
     initAOS();
     initParticles();
     initSmoothScroll();
+    initMouseGlow();
+    initContactForm();
+    initReviewSystem();
 });
 
 /* -------------------------------------------------------
@@ -215,4 +218,145 @@ function initSmoothScroll() {
             }
         });
     });
+}
+
+/* -------------------------------------------------------
+   8. EFEITO DE LUZ SEGUINDO O MOUSE NO FUNDO
+------------------------------------------------------- */
+function initMouseGlow() {
+    const glow = document.createElement('div');
+    glow.className = 'mouse-glow';
+    document.body.appendChild(glow);
+
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+    let glowX = mouseX;
+    let glowY = mouseY;
+
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    // Suavizar o movimento do glow
+    function animateGlow() {
+        glowX += (mouseX - glowX) * 0.1;
+        glowY += (mouseY - glowY) * 0.1;
+        glow.style.transform = `translate(${glowX}px, ${glowY}px)`;
+        requestAnimationFrame(animateGlow);
+    }
+    animateGlow();
+}
+
+/* -------------------------------------------------------
+   9. FORMULÁRIO DE CONTATO (FORMSPREE)
+------------------------------------------------------- */
+function initContactForm() {
+    const form = document.getElementById('form-contato');
+    const btnSubmit = document.getElementById('btn-submit');
+    const successMsg = document.getElementById('form-success');
+    const errorMsg = document.getElementById('form-error');
+
+    if (!form) return;
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // Estado de carregamento
+        btnSubmit.disabled = true;
+        const originalText = btnSubmit.querySelector('span').textContent;
+        btnSubmit.querySelector('span').textContent = 'Enviando...';
+        successMsg.classList.remove('visible');
+        errorMsg.classList.remove('visible');
+
+        const formData = new FormData(form);
+
+        try {
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                // Sucesso
+                form.reset();
+                successMsg.classList.add('visible');
+                setTimeout(() => successMsg.classList.remove('visible'), 5000);
+            } else {
+                // Erro do servidor
+                throw new Error('Falha no envio');
+            }
+        } catch (error) {
+            // Erro de rede ou outro
+            errorMsg.classList.add('visible');
+            setTimeout(() => errorMsg.classList.remove('visible'), 5000);
+        } finally {
+            btnSubmit.disabled = false;
+            btnSubmit.querySelector('span').textContent = originalText;
+        }
+    });
+}
+
+/* -------------------------------------------------------
+   10. SISTEMA DE AVALIAÇÃO (DEPOIMENTOS)
+------------------------------------------------------- */
+function initReviewSystem() {
+    const btnShowForm = document.getElementById('btn-show-review-form');
+    const formContainer = document.getElementById('review-form-container');
+    const form = document.getElementById('form-depoimento');
+    const successMsg = document.getElementById('review-success');
+    const btnSubmit = document.getElementById('btn-submit-review');
+
+    if (!btnShowForm || !formContainer) return;
+
+    btnShowForm.addEventListener('click', () => {
+        formContainer.classList.toggle('open');
+        btnShowForm.textContent = formContainer.classList.contains('open') ? 'Fechar formulário' : 'Deixe sua avaliação';
+        
+        if (formContainer.classList.contains('open')) {
+            setTimeout(() => {
+                formContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 100);
+        }
+    });
+
+    if (form) {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            btnSubmit.disabled = true;
+            const originalText = btnSubmit.textContent;
+            btnSubmit.textContent = 'Enviando...';
+
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    form.reset();
+                    successMsg.classList.add('visible');
+                    setTimeout(() => {
+                        successMsg.classList.remove('visible');
+                        formContainer.classList.remove('open');
+                        btnShowForm.textContent = 'Deixe sua avaliação';
+                    }, 5000);
+                } else {
+                    throw new Error();
+                }
+            } catch (err) {
+                alert('Erro ao enviar avaliação. Tente novamente.');
+            } finally {
+                btnSubmit.disabled = false;
+                btnSubmit.textContent = originalText;
+            }
+        });
+    }
 }

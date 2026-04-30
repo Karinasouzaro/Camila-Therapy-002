@@ -26,19 +26,14 @@
     <header id="navbar" class="navbar">
         <div class="nav-container">
             <a href="#home" class="nav-logo">
-                <div class="logo-brand">
-                    <div class="logo-with-icon">
-                        <i class="bi bi-heart-fill logo-icon"></i>
-                        <span class="brand-camila">Camila</span>
-                    </div>
-                    <span class="brand-therapy">Therapy</span>
-                </div>
+                <img src="logo.png" alt="Camila Therapy Logo" class="logo-img">
             </a>
 
             <nav class="nav-menu">
                 <ul class="nav-links">
                     <li><a href="#home" class="nav-link active">Home</a></li>
                     <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                    <li><a href="#depoimentos" class="nav-link">Avaliações</a></li>
                     <li><a href="#consultas" class="nav-link">Consultas e Sobre</a></li>
                     <li><a href="#contato" class="nav-link">Contato</a></li>
                 </ul>
@@ -65,6 +60,7 @@
             <ul class="mobile-links">
                 <li><a href="#home" class="mobile-link">Home</a></li>
                 <li><a href="#servicos" class="mobile-link">Serviços</a></li>
+                <li><a href="#depoimentos" class="mobile-link">Avaliações</a></li>
                 <li><a href="#consultas" class="mobile-link">Consultas e Sobre</a></li>
                 <li><a href="#contato" class="mobile-link">Contato</a></li>
             </ul>
@@ -80,6 +76,10 @@
         <a href="#servicos" class="bottom-nav-item">
             <i class="bi bi-brain"></i>
             <span>Serviços</span>
+        </a>
+        <a href="#depoimentos" class="bottom-nav-item">
+            <i class="bi bi-star"></i>
+            <span>Avaliações</span>
         </a>
         <a href="#contato" class="bottom-nav-item agendar-item">
             <div class="agendar-circle">
@@ -181,6 +181,112 @@
             </div>
         </section>
 
+        <!-- Depoimentos Section -->
+        <section id="depoimentos" class="section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">Depoimentos</span>
+                    <h2 class="section-title">O que dizem os <span class="highlight-text">pacientes</span></h2>
+                    <p class="section-desc">A maior recompensa do meu trabalho é ver a evolução e o bem-estar de quem confia na minha escuta.</p>
+                </div>
+
+                <div class="testimonials-grid">
+                    <!-- Depoimento 1 -->
+                    <div class="testimonial-card glass" data-aos="fade-up">
+                        <div class="testimonial-rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="testimonial-text">"O atendimento da Camila é extremamente humano e acolhedor. Em poucas sessões já senti uma diferença enorme na forma como lido com a minha ansiedade. Me sinto muito segura e respeitada."</p>
+                        <div class="testimonial-author">
+                            <span class="author-name">M. Silva</span>
+                            <span class="author-info">Paciente de Psicoterapia</span>
+                        </div>
+                        <i class="bi bi-quote quote-icon"></i>
+                    </div>
+
+                    <!-- Depoimento 2 -->
+                    <div class="testimonial-card glass" data-aos="fade-up" data-aos-delay="100">
+                        <div class="testimonial-rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="testimonial-text">"Fiz a avaliação neuropsicológica com ela e foi um divisor de águas. O relatório foi muito detalhado e me ajudou a entender dificuldades que eu tinha desde a infância. Recomendo muito!"</p>
+                        <div class="testimonial-author">
+                            <span class="author-name">R. Oliveira</span>
+                            <span class="author-info">Avaliação Neuropsicológica</span>
+                        </div>
+                        <i class="bi bi-quote quote-icon"></i>
+                    </div>
+
+                    <!-- Depoimento 3 -->
+                    <div class="testimonial-card glass" data-aos="fade-up" data-aos-delay="200">
+                        <div class="testimonial-rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="testimonial-text">"Espaço acolhedor e profissional. A Camila tem uma sensibilidade única para ouvir. O processo de terapia tem me ajudado a ter mais clareza e leveza no dia a dia."</p>
+                        <div class="testimonial-author">
+                            <span class="author-name">A. Santos</span>
+                            <span class="author-info">Paciente Online</span>
+                        </div>
+                        <i class="bi bi-quote quote-icon"></i>
+                    </div>
+                </div>
+
+                <div class="testimonials-footer" data-aos="fade-up">
+                    <button id="btn-show-review-form" class="btn-outline">Deixe sua avaliação</button>
+                </div>
+
+                <!-- Formulário de Avaliação (Escondido por padrão) -->
+                <div id="review-form-container" class="review-form-wrapper glass">
+                    <h3>Sua opinião é muito importante</h3>
+                    <p>Compartilhe sua experiência para ajudar outras pessoas.</p>
+                    
+                    <form id="form-depoimento" action="https://formspree.io/f/mbdwrdkq" method="POST">
+                        <div class="form-group">
+                            <label>Sua nota:</label>
+                            <div class="star-rating-input">
+                                <input type="radio" id="star5" name="rating" value="5" required /><label for="star5" title="5 estrelas"><i class="bi bi-star-fill"></i></label>
+                                <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="4 estrelas"><i class="bi bi-star-fill"></i></label>
+                                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="3 estrelas"><i class="bi bi-star-fill"></i></label>
+                                <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="2 estrelas"><i class="bi bi-star-fill"></i></label>
+                                <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="1 estrela"><i class="bi bi-star-fill"></i></label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="rev-nome">Nome (ou iniciais)</label>
+                                <input type="text" id="rev-nome" name="nome" placeholder="Ex: M. Silva" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="rev-servico">Serviço realizado</label>
+                                <input type="text" id="rev-servico" name="servico" placeholder="Ex: Psicoterapia">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="rev-mensagem">Seu depoimento</label>
+                            <textarea id="rev-mensagem" name="mensagem" rows="3" placeholder="Como foi seu atendimento?" required></textarea>
+                        </div>
+                        <button type="submit" id="btn-submit-review" class="btn-primary">Enviar Avaliação</button>
+                        
+                        <div id="review-success" class="form-feedback success">
+                            <i class="bi bi-check-circle"></i> Obrigado pelo seu depoimento! Ele será analisado antes de ser publicado.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
         <!-- Tabs Section (Consultas / Sobre) -->
         <section id="consultas" class="section bg-alt">
             <div class="container">
@@ -198,7 +304,7 @@
                                 <li><i class="bi bi-check-lg"></i> <strong>Online:</strong> Atendimento por plataforma de vídeo segura, no conforto da sua casa.</li>
                                 <li><i class="bi bi-check-lg"></i> <strong>Primeira vez?</strong> É normal sentir um pouco de ansiedade. Nosso primeiro encontro é focado em nos conhecermos e criar um espaço seguro para você.</li>
                             </ul>
-                            <a href="https://wa.me/5511999999999" target="_blank" class="btn-primary">Agendar via WhatsApp</a>
+                            <a href="https://wa.me/5511976341478" target="_blank" class="btn-primary">Agendar via WhatsApp</a>
                         </div>
                         <div id="tab-sobre-panel" class="tab-panel">
                             <div id="sobre"></div> <!-- Âncora interna -->
@@ -214,38 +320,68 @@
             </div>
         </section>
 
-        <!-- Seção de Contato -->
-        <section id="contato" class="section">
+        <!-- Seção de Contato Premium -->
+        <section id="contato" class="section-premium-contact">
             <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <span class="section-tag">Fale Comigo</span>
-                    <h2 class="section-title">Vamos iniciar uma <span class="highlight-text">conversa?</span></h2>
-                    <p class="section-desc">Na Camila Therapy, oferecemos um atendimento dedicado ao seu bem-estar. Escolha o canal de sua preferência, e lembre-se: <strong>Estou aqui para te ouvir.</strong></p>
-                </div>
-
-                <div class="contact-grid">
-                    <!-- WhatsApp -->
-                    <div class="contact-card glass" data-aos="fade-up">
-                        <div class="contact-icon wa"><i class="bi bi-whatsapp"></i></div>
-                        <h3>WhatsApp</h3>
-                        <p>Dúvidas rápidas e agendamentos imediatos por mensagem.</p>
-                        <a href="https://wa.me/5511999999999" target="_blank" class="btn-contact">Enviar Mensagem</a>
+                <div class="contact-flex-container">
+                    <!-- Lado Esquerdo (Emocional) -->
+                    <div class="contact-info-col" data-aos="fade-right">
+                        <span class="section-tag">Fale Comigo</span>
+                        <h2 class="contact-title">Vamos conversar?</h2>
+                        <p class="contact-text">Se você sente que chegou o momento de cuidar de si, estou aqui para te ouvir com acolhimento, respeito e atenção.</p>
+                        <p class="contact-subtext">O primeiro passo pode ser mais leve do que parece.</p>
+                        
+                        <div class="contact-action-buttons">
+                            <a href="https://wa.me/5511976341478" target="_blank" class="btn-wa-premium">
+                                <i class="bi bi-whatsapp"></i> Agendar pelo WhatsApp
+                            </a>
+                            <a href="mailto:contato@camilatherapy.com.br" class="btn-mail-premium">
+                                <i class="bi bi-envelope"></i> Enviar E-mail
+                            </a>
+                            <a href="https://instagram.com/seuusuario" target="_blank" class="btn-ig-premium">
+                                <i class="bi bi-instagram"></i> Instagram
+                            </a>
+                        </div>
                     </div>
 
-                    <!-- Instagram -->
-                    <div class="contact-card glass" data-aos="fade-up" data-aos-delay="100">
-                        <div class="contact-icon ig"><i class="bi bi-instagram"></i></div>
-                        <h3>Instagram</h3>
-                        <p>Acompanhe meu conteúdo e dicas sobre saúde mental.</p>
-                        <a href="https://instagram.com/seuusuario" target="_blank" class="btn-contact">Seguir no Instagram</a>
-                    </div>
+                    <!-- Lado Direito (Formulário) -->
+                    <div class="contact-form-col" data-aos="fade-left">
+                        <div class="contact-card-premium glass">
+                            <form id="form-contato" action="https://formspree.io/f/mbdwrdkq" method="POST">
+                                <div class="form-group">
+                                    <label for="nome">Nome</label>
+                                    <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">E-mail</label>
+                                    <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="telefone">Telefone (opcional)</label>
+                                    <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+                                </div>
+                                <div class="form-group">
+                                    <label for="mensagem">Como posso te ajudar?</label>
+                                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte-me um pouco sobre o que você busca..." required></textarea>
+                                </div>
+                                <button type="submit" id="btn-submit" class="btn-submit-premium">
+                                    <span>Enviar mensagem</span>
+                                    <i class="bi bi-send"></i>
+                                </button>
+                                
+                                <p class="privacy-note">
+                                    <i class="bi bi-shield-lock"></i> Seu contato será tratado com sigilo e cuidado.
+                                </p>
 
-                    <!-- Email -->
-                    <div class="contact-card glass" data-aos="fade-up" data-aos-delay="200">
-                        <div class="contact-icon mail"><i class="bi bi-envelope-at"></i></div>
-                        <h3>E-mail</h3>
-                        <p>Para parcerias, dúvidas formais ou outras solicitações.</p>
-                        <a href="mailto:contato@camilatherapy.com.br" class="btn-contact">Enviar E-mail</a>
+                                <!-- Mensagens de feedback -->
+                                <div id="form-success" class="form-feedback success">
+                                    <i class="bi bi-check-circle"></i> Mensagem enviada com sucesso!
+                                </div>
+                                <div id="form-error" class="form-feedback error">
+                                    <i class="bi bi-exclamation-triangle"></i> Ops! Ocorreu um erro. Tente novamente.
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -259,13 +395,7 @@
             <div class="footer-grid">
                 <div class="footer-info">
                     <a href="#home" class="footer-logo">
-                        <div class="logo-brand footer-logo-brand">
-                            <div class="logo-with-icon">
-                                <i class="bi bi-heart-fill logo-icon"></i>
-                                <span class="brand-camila">Camila</span>
-                            </div>
-                            <span class="brand-therapy">Therapy</span>
-                        </div>
+                        <img src="logo.png" alt="Camila Therapy Logo" class="footer-logo-img">
                     </a>
                     <p>Cuidando da sua saúde mental com ética e profissionalismo.</p>
                     <div class="social-links">
@@ -276,9 +406,9 @@
                 </div>
                 <div class="footer-contact">
                     <h4>Contato</h4>
-                    <p><i class="bi bi-geo-alt"></i> Av. Exemplo, 123 - Centro</p>
+                    <p><i class="bi bi-geo-alt"></i> Rua Magia Pensantes, 1453 - Morumbi</p>
                     <p><i class="bi bi-envelope"></i> contato@camilatherapy.com.br</p>
-                    <p><i class="bi bi-whatsapp"></i> (11) 99999-9999</p>
+                    <p><i class="bi bi-whatsapp"></i> (11) 97634-1478</p>
                 </div>
             </div>
             <div class="footer-bottom">
